@@ -40,11 +40,18 @@ export default function Home() {
           <p className="text-gray-600">
             Discover businesses around your location
           </p>
+          <p className="text-black-600">It may take few seconds when search</p>
         </div>
 
-        <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-md p-6 mb-8">
+        <form
+          onSubmit={handleSubmit}
+          className="bg-white rounded-lg shadow-md p-6 mb-8"
+        >
           <div className="mb-6">
-            <label htmlFor="type" className="block text-sm font-medium text-gray-700 mb-2">
+            <label
+              htmlFor="type"
+              className="block text-sm font-medium text-gray-700 mb-2"
+            >
               Type of business
             </label>
             <div className="relative">
@@ -62,7 +69,10 @@ export default function Home() {
           </div>
 
           <div className="mb-6">
-            <label htmlFor="radius" className="block text-sm font-medium text-gray-700 mb-2">
+            <label
+              htmlFor="radius"
+              className="block text-sm font-medium text-gray-700 mb-2"
+            >
               Search radius: {(radius / 1000).toFixed(1)}km
             </label>
             <input

@@ -9,12 +9,11 @@ export default function Login() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (email === 'test@gmail.com' && password === "test"){
-        alert("Login successful!");
-        navigate("/home");
-    }
-    else{
-        alert("Login credentials are wrong,Please try again.");
+    if (email === "test@gmail.com" && password === "test") {
+      alert("Login successful!");
+      navigate("/home");
+    } else {
+      alert("Login credentials are wrong,Please try again.");
     }
     // Define the API URL
     // const apiUrl = `https://sahils2004.app.n8n.cloud/webhook-test/login`;
@@ -33,17 +32,22 @@ export default function Login() {
     //   })
     //   .catch((error) => {
     //     console.error("Error during login:", error);
-        
+
     //   });
   };
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="max-w-md w-full bg-white rounded-lg shadow-md p-8">
-        <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">Login</h2>
+        <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
+          Login
+        </h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+            <label
+              htmlFor="email"
+              className="block text-sm font-medium text-gray-700 mb-2"
+            >
               Email
             </label>
             <input
@@ -57,7 +61,10 @@ export default function Login() {
             />
           </div>
           <div className="mb-4">
-            <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+            <label
+              htmlFor="password"
+              className="block text-sm font-medium text-gray-700 mb-2"
+            >
               Password
             </label>
             <input
@@ -77,6 +84,9 @@ export default function Login() {
             Login
           </button>
         </form>
+        <p>For test:-</p>
+        <p>email: test@gmail.com</p>
+        <p>password: test</p>
       </div>
     </div>
   );
